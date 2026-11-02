@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -19,7 +18,7 @@
             color: #3e2723;
         }
 
-        /* ส่วนหัวเว็บไซต์ */
+        /* Header Layout using Table */
         header {
             position: fixed;
             top: 0;
@@ -40,6 +39,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #4e342e;
+            cursor: pointer;
         }
 
         .nav-menu-table {
@@ -51,18 +51,17 @@
             padding: 0 1rem;
         }
 
-        /* เมนูด้านบน */
-        a {
-            text-decoration: none;
+        .nav-menu-table span {
             color: #3e2723;
             font-weight: 500;
+            cursor: pointer;
         }
 
-        .nav-menu-table a:hover {
+        .nav-menu-table span:hover {
             color: #8d6e63;
         }
 
-        /* ส่วนขนมโฮมเมด */
+        /* Container Layout */
         .bakery-container {
             padding: 7rem 5% 4rem;
             max-width: 1000px;
@@ -80,10 +79,9 @@
             color: #6d4c41;
             margin-bottom: 2.5rem;
             text-align: center;
-            line-height: 1.6;
         }
 
-        /* ตารางขนม */
+        /* Bakery Grid Table Layout (2 Cards per Row) */
         .bakery-grid-table {
             width: 100%;
             border-collapse: separate;
@@ -109,7 +107,6 @@
             width: 40%;
         }
 
-        /* รูปภาพขนม */
         .bakery-img {
             width: 100%;
             height: 160px;
@@ -133,7 +130,7 @@
         .card-info-td p {
             font-size: 0.88rem;
             color: #6d4c41;
-            line-height: 1.5;
+            line-height: 1.4;
             margin-bottom: 0.8rem;
         }
 
@@ -143,96 +140,55 @@
             font-size: 1.15rem;
         }
 
-        /* แสดงผลบนโทรศัพท์ */
         @media (max-width: 768px) {
-            header {
-                padding: 0.8rem 2%;
-            }
-
-            .nav-menu-table {
-                display: none;
-            }
-
-            .bakery-container {
-                padding: 6rem 3% 3rem;
-            }
-
-            .bakery-grid-table,
-            .bakery-grid-table tr,
-            .bakery-card-td {
+            .nav-menu-table { display: none; }
+            .bakery-grid-table, .bakery-grid-table tr, .bakery-card-td {
                 display: block;
                 width: 100%;
-            }
-
-            .bakery-grid-table {
                 border-spacing: 0;
-            }
-
-            .bakery-card-td {
                 margin-bottom: 1rem;
-            }
-
-            .bakery-img {
-                height: 160px;
-            }
-
-            .section-title {
-                font-size: 1.7rem;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- ส่วนหัวเว็บไซต์ -->
+    <!-- Header (ใช้ตาราง Table และ tr/td แทน nav) -->
     <header>
         <table class="nav-table">
             <tr>
                 <td style="text-align: left;">
                     <span class="logo">บ้านไร่กาแฟ</span>
                 </td>
-
                 <td style="text-align: right;">
                     <table class="nav-menu-table">
                         <tr>
-                            <td><a href="index.html">หน้าแรก</a></td>
-                            <td><a href="index2.html">บรรยากาศไร่</a></td>
-                            <td><a href="index3.html">เมนูกาแฟ</a></td>
-                            <td><a href="index4.html">ขนมโฮมเมด</a></td>
-                            <td><a href="index5.html">ติดต่อเรา</a></td>
-                        </tr>
+    <td><a href="index.html">หน้าแรก</a></td>
+    <td><a href="index2.html">บรรยากาศไร่</a></td>
+    <td><a href="index3.html">เมนูกาแฟ</a></td>
+    <td><a href="index4.html">ขนมโฮมเมด</a></td>
+    <td><a href="index5.html">ติดต่อเรา</a></td>
+</tr>
                     </table>
                 </td>
             </tr>
         </table>
     </header>
 
-    <!-- ส่วนเนื้อหาขนมโฮมเมด -->
+    
     <div class="bakery-container">
-
         <h2 class="section-title">เบเกอรี่ & ขนมโฮมเมด</h2>
-
-        <p class="section-subtitle">
-            อบสดใหม่จากเตาทุกวัน ทานคู่กับกาแฟสดคั่วใหม่
-            เข้ากันได้อย่างลงตัว
-        </p>
+        <p class="section-subtitle">อบสดใหม่จากเตาทุกวัน ทานคู่กับกาแฟสดคั่วใหม่เข้ากันได้อย่างลงตัว</p>
 
         <!-- แถวที่ 1 -->
         <table class="bakery-grid-table">
             <tr>
-
-                <!-- ขนมชิ้นที่ 1 -->
                 <td class="bakery-card-td">
                     <table class="card-inner-table">
                         <tr>
                             <td class="card-img-td">
-                                <img src="images/87.jpg"
-                                     width="200" height="160"
-                                     class="bakery-img"
-                                     alt="พายมะพร้าวอ่อน">
+                        <img src="images/87.jpg" width="200" height="200"alt="พายมะพร้าวอ่อน">
                             </td>
-
                             <td class="card-info-td">
                                 <h3>พายมะพร้าวอ่อนบ้านไร่</h3>
                                 <p>แป้งพายกรอบหอมเนย สอดไส้ครีมมะพร้าวอ่อนรสหวานละมุนลิ้น</p>
@@ -241,18 +197,12 @@
                         </tr>
                     </table>
                 </td>
-
-                <!-- ขนมชิ้นที่ 2 -->
                 <td class="bakery-card-td">
                     <table class="card-inner-table">
                         <tr>
                             <td class="card-img-td">
-                                <img src="images/56.jpg"
-                                     width="200" height="160"
-                                     class="bakery-img"
-                                     alt="เค้กกล้วยหอม">
+                             <img src="images/56.jpg"width=200" height="200" alt="เค้กกล้วยหอม">
                             </td>
-
                             <td class="card-info-td">
                                 <h3>เค้กกล้วยหอมอบวอลนัท</h3>
                                 <p>เค้กกล้วยหอมเนื้อนุ่มฉ่ำ โรยหน้าด้วยวอลนัทอบกรอบหอมมัน</p>
@@ -261,25 +211,18 @@
                         </tr>
                     </table>
                 </td>
-
             </tr>
         </table>
 
         <!-- แถวที่ 2 -->
         <table class="bakery-grid-table">
             <tr>
-
-                <!-- ขนมชิ้นที่ 3 -->
                 <td class="bakery-card-td">
                     <table class="card-inner-table">
                         <tr>
                             <td class="card-img-td">
-                                <img src="images/67.jpg"
-                                     width="200" height="160"
-                                     class="bakery-img"
-                                     alt="สโคนเนยสด">
+                            <img src="images/67.jpg" width="200" height="200"alt="สโคนเนยสด">
                             </td>
-
                             <td class="card-info-td">
                                 <h3>สโคนเนยสดแยมสตรอว์เบอร์รี</h3>
                                 <p>สโคนสไตล์อังกฤษหอมเนยสด เสิร์ฟพร้อมแยมและแคลตเต็ดครีม</p>
@@ -288,18 +231,12 @@
                         </tr>
                     </table>
                 </td>
-
-                <!-- ขนมชิ้นที่ 4 -->
                 <td class="bakery-card-td">
                     <table class="card-inner-table">
                         <tr>
                             <td class="card-img-td">
-                                <img src="images/333.jpg"
-                                     width="200" height="160"
-                                     class="bakery-img"
-                                     alt="บราวนี่แมคคาเดเมีย">
+                      <img src="images/333.jpg"width="200" height="200" alt="บราวนี่แมคคาเดเมีย">
                             </td>
-
                             <td class="card-info-td">
                                 <h3>บราวนี่เนื้อหนึบแมคคาเดเมีย</h3>
                                 <p>บราวนี่ช็อกโกแลตแท้รสเข้มข้น ท็อปด้วยถั่วแมคคาเดเมียอบกรอบ</p>
@@ -308,7 +245,6 @@
                         </tr>
                     </table>
                 </td>
-
             </tr>
         </table>
 
