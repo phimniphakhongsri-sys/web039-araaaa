@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -19,7 +18,7 @@
             color: #3e2723;
         }
 
-        /* ส่วนหัวเว็บไซต์ */
+        /* Header Layout using Table */
         header {
             position: fixed;
             top: 0;
@@ -40,6 +39,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #4e342e;
+            cursor: pointer;
         }
 
         .nav-menu-table {
@@ -51,18 +51,17 @@
             padding: 0 1rem;
         }
 
-        /* เมนูด้านบน */
-        a {
-            text-decoration: none;
+        .nav-menu-table span {
             color: #3e2723;
             font-weight: 500;
+            cursor: pointer;
         }
 
-        .nav-menu-table a:hover {
+        .nav-menu-table span:hover {
             color: #8d6e63;
         }
 
-        /* ส่วนบรรยากาศไร่ */
+        /* Atmosphere Section Layout using Table */
         .atmos-container {
             padding: 7rem 5% 4rem;
             text-align: center;
@@ -77,10 +76,8 @@
         .section-subtitle {
             color: #6d4c41;
             margin-bottom: 2.5rem;
-            line-height: 1.6;
         }
 
-        /* ตารางรูปภาพ */
         .atmos-table {
             width: 100%;
             border-collapse: separate;
@@ -118,135 +115,74 @@
         .atmos-info p {
             font-size: 0.9rem;
             color: #6d4c41;
-            line-height: 1.6;
+            line-height: 1.4;
         }
 
-        /* แสดงผลบนโทรศัพท์ */
         @media (max-width: 768px) {
-            header {
-                padding: 0.8rem 2%;
-            }
-
-            .nav-menu-table {
-                display: none;
-            }
-
-            .atmos-table,
-            .atmos-table tr,
-            .atmos-card {
+            .nav-menu-table { display: none; }
+            .atmos-table, .atmos-table tr, .atmos-card {
                 display: block;
                 width: 100%;
-            }
-
-            .atmos-table {
                 border-spacing: 0;
-            }
-
-            .atmos-card {
                 margin-bottom: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.7rem;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- ส่วนหัวเว็บไซต์ -->
+
     <header>
         <table class="nav-table">
             <tr>
                 <td style="text-align: left;">
                     <span class="logo">บ้านไร่กาแฟ</span>
                 </td>
-
                 <td style="text-align: right;">
                     <table class="nav-menu-table">
-                        <tr>
-                            <td><a href="index.html">หน้าแรก</a></td>
-                            <td><a href="index2.html">บรรยากาศไร่</a></td>
-                            <td><a href="index3.html">เมนูกาแฟ</a></td>
-                            <td><a href="index4.html">ขนมโฮมเมด</a></td>
-                            <td><a href="index5.html">ติดต่อเรา</a></td>
-                        </tr>
-                    </table>
+                   <tr>
+       <td><a href="index.html">หน้าแรก</a></td>
+    	<td><a href="index2.html">บรรยากาศไร่</a></td>
+  	  <td><a href="index3.html">เมนูกาแฟ</a></td>
+    	<td><a href="index4.html">ขนมโฮมเมด</a></td>
+   	 <td><a href="index5.html">ติดต่อเรา</a></td>
+</tr>                    
+		</table>
                 </td>
             </tr>
         </table>
     </header>
 
-    <!-- ส่วนแสดงบรรยากาศไร่ -->
+    
     <div class="atmos-container">
-
-        <h2 class="section-title">
-            บรรยากาศรอบบ้านไร่กาแฟ
-        </h2>
-
-        <p class="section-subtitle">
-            ดื่มด่ำกับธรรมชาติ ทิวทัศน์แปลงกาแฟ
-            และความสงบผ่อนคลายในสไตล์บ้านไร่
-        </p>
+        <h2 class="section-title">บรรยากาศรอบบ้านไร่กาแฟ</h2>
+        <p class="section-subtitle">ดื่มด่ำกับธรรมชาติ ทิวทัศน์แปลงกาแฟ และความสงบผ่อนคลายในสไตล์บ้านไร่</p>
 
         <table class="atmos-table">
             <tr>
-
-                <!-- รูปที่ 1 -->
                 <td class="atmos-card">
-                    <img src="images/344.jpg"
-                         width="300" height="220"
-                         class="atmos-img"
-                         alt="แปลงต้นกาแฟ">
-
+                    <img src="images/344.jpg" alt="แปลงต้นกาแฟ">
                     <div class="atmos-info">
                         <h3>แปลงปลูกกาแฟธรรมชาติ</h3>
-                        <p>
-                            เดินชมต้นกาแฟสดๆ จากแปลงปลูก
-                            สัมผัสวิถีเกษตรกรและกระบวนการ
-                            ดูแลเมล็ดกาแฟอย่างใกล้ชิด
-                        </p>
+                        <p>เดินชมต้นกาแฟสดๆ จากแปลงปลูก สัมผัสวิถีเกษตรกรและกระบวนการดูแลเมล็ดกาแฟอย่างใกล้ชิด</p>
                     </div>
                 </td>
-
-                <!-- รูปที่ 2 -->
                 <td class="atmos-card">
-                    <img src="images/000.jpg"
-                         width="300" height="220"
-                         class="atmos-img"
-                         alt="ระเบียงไม้ชมวิว">
-
+                    <img src="images/000.jpg" alt="ระเบียงไม้ชมวิว">
                     <div class="atmos-info">
                         <h3>ระเบียงไม้ชมวิวพาโนรามา</h3>
-                        <p>
-                            จิบกาแฟบนระเบียงไม้รับลมเย็น
-                            มองเห็นวิวทิวเขาและแปลงกาแฟ
-                            เขียวขจีสุดสายตา
-                        </p>
+                        <p>จิบกาแฟบนระเบียงไม้รับลมเย็น มองเห็นวิวทิวเขาและแปลงกาแฟเขียวขจีสุดสายตา</p>
                     </div>
                 </td>
-
-                <!-- รูปที่ 3 -->
                 <td class="atmos-card">
-                    <img src="images/900.jpg"
-                         width="300" height="220"
-                         class="atmos-img"
-                         alt="โรงคั่วกาแฟ">
-
+                    <img src="images/900.jpg""โรงคั่วกาแฟดิบ">
                     <div class="atmos-info">
                         <h3>มุมโรงคั่วกาแฟโฮมเมด</h3>
-                        <p>
-                            สัมผัสกลิ่นหอมกรุ่นของเมล็ดกาแฟ
-                            คั่วใหม่สดๆ จากโรงคั่วประจำไร่
-                            ในทุกๆ เช้า
-                        </p>
+                        <p>สัมผัสกลิ่นหอมกรุ่นของเมล็ดกาแฟคั่วใหม่สดๆ จากโรงคั่วประจำไร่ในทุกๆ เช้า</p>
                     </div>
                 </td>
-
             </tr>
         </table>
-
     </div>
 
 </body>
