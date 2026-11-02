@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -18,7 +19,7 @@
             color: #3e2723;
         }
 
-        /* Header Layout using Table */
+        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -39,7 +40,6 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #4e342e;
-            cursor: pointer;
         }
 
         .nav-menu-table {
@@ -51,25 +51,33 @@
             padding: 0 1rem;
         }
 
-        .nav-menu-table span {
+        /* เมนูด้านบน */
+        .nav-menu-table a {
             color: #3e2723;
             font-weight: 500;
-            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 0;
+            transition: 0.3s;
         }
 
-        .nav-menu-table span:hover {
-            color: #8d6e63;
+        .nav-menu-table a:hover {
+            color: #a1887f;
         }
 
-        /* Hero Banner Section (1920x600 px Ratio Layout using Table) */
+        /* Hero Banner */
         .hero-banner {
             margin-top: 65px;
             width: 100%;
             aspect-ratio: 1920 / 600;
             min-height: 400px;
             max-height: 600px;
-            background: linear-gradient(rgba(44, 24, 16, 0.5), rgba(44, 24, 16, 0.5)), 
-                        url('images/pre.jpg') center/cover no-repeat;
+            background:
+                linear-gradient(
+                    rgba(44, 24, 16, 0.5),
+                    rgba(44, 24, 16, 0.5)
+                ),
+                url('images/pre.jpg') center/cover no-repeat;
             color: #ffffff;
         }
 
@@ -89,7 +97,7 @@
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
         }
 
         .hero-subtitle {
@@ -97,9 +105,10 @@
             margin-bottom: 2rem;
             font-weight: 300;
             line-height: 1.5;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
 
+        /* ปุ่มหน้าแรก */
         .btn-table {
             margin: 0 auto;
             border-collapse: collapse;
@@ -116,7 +125,8 @@
             font-weight: 600;
             border-radius: 30px;
             display: inline-block;
-            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
         .btn-secondary {
@@ -126,52 +136,109 @@
             font-weight: 600;
             border-radius: 30px;
             display: inline-block;
-            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
+        .btn-main:hover,
+        .btn-secondary:hover {
+            opacity: 0.8;
+            transform: translateY(-3px);
+        }
+
+        /* หน้าจอมือถือ */
         @media (max-width: 768px) {
-            .nav-menu-table { display: none; }
-            .hero-banner { aspect-ratio: auto; height: 75vh; }
+            header {
+                padding: 0.8rem 2%;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .nav-menu-table td {
+                padding: 0 4px;
+            }
+
+            .nav-menu-table a {
+                font-size: 11px;
+            }
+
+            .hero-banner {
+                aspect-ratio: auto;
+                height: 75vh;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .btn-main,
+            .btn-secondary {
+                padding: 0.7rem 1rem;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Header Navbar (ใช้ตาราง Table และ tr/td แทน nav) -->
+    <!-- Header Navbar -->
     <header>
         <table class="nav-table">
             <tr>
                 <td style="text-align: left;">
                     <span class="logo">บ้านไร่กาแฟ</span>
                 </td>
+
                 <td style="text-align: right;">
                     <table class="nav-menu-table">
-                                             <tr>
-    <td><a href="index.html">หน้าแรก</a></td>
-    <td><a href="index2.html">บรรยากาศไร่</a></td>
-    <td><a href="index3.html">เมนูกาแฟ</a></td>
-    <td><a href="index4.html">ขนมโฮมเมด</a></td>
-    <td><a href="index5.html">ติดต่อเรา</a></td>
-</tr>
+                        <tr>
+                            <td><a href="index.html">หน้าแรก</a></td>
+                            <td><a href="index2.html">บรรยากาศไร่</a></td>
+                            <td><a href="index3.html">เมนูกาแฟ</a></td>
+                            <td><a href="index4.html">ขนมโฮมเมด</a></td>
+                            <td><a href="index5.html">ติดต่อเรา</a></td>
+                        </tr>
                     </table>
                 </td>
             </tr>
         </table>
     </header>
 
-    <!-- ส่วนหน้าแรก (Hero Banner) -->
+    <!-- ส่วนหน้าแรก -->
     <section class="hero-banner">
         <table class="hero-table">
             <tr>
                 <td>
                     <h1 class="hero-title">บ้านไร่กาแฟ</h1>
-                    <p class="hero-subtitle">สัมผัสรสชาติกาแฟสดจากไร่ อบอุ่น คลาสสิก ท่ามกลางบรรยากาศธรรมชาติ</p>
+
+                    <p class="hero-subtitle">
+                        สัมผัสรสชาติกาแฟสดจากไร่
+                        อบอุ่น คลาสสิก ท่ามกลางบรรยากาศธรรมชาติ
+                    </p>
+
                     <table class="btn-table">
                         <tr>
-                            <td><span class="btn-main">ดูเมนูกาแฟ</span></td>
-                            <td><span class="btn-secondary">ดูขนมโฮมเมด</span></td>
+                            <td>
+                                <a href="index3.html" class="btn-main">
+                                    ดูเมนูกาแฟ
+                                </a>
+                            </td>
+
+                            <td>
+                                <a href="index4.html" class="btn-secondary">
+                                    ดูขนมโฮมเมด
+                                </a>
+                            </td>
                         </tr>
                     </table>
+
                 </td>
             </tr>
         </table>
@@ -179,3 +246,4 @@
 
 </body>
 </html>
+
