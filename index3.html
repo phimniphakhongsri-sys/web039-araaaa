@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บ้านไร่กาแฟ - เมนูกาแฟ</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f7f4ef;
+            color: #3e2723;
+        }
+
+        /* Header Layout using Table */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            padding: 0.8rem 5%;
+        }
+
+        .nav-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4e342e;
+            cursor: pointer;
+        }
+
+        .nav-menu-table {
+            border-collapse: collapse;
+            margin-left: auto;
+        }
+
+        .nav-menu-table td {
+            padding: 0 1rem;
+        }
+
+        .nav-menu-table span {
+            color: #3e2723;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .nav-menu-table span:hover {
+            color: #8d6e63;
+        }
+
+        /* Menu Section Layout using Table */
+        .menu-container {
+            padding: 7rem 5% 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #4e342e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: #6d4c41;
+            margin-bottom: 2.5rem;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .menu-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            vertical-align: top;
+            width: 33.33%;
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .menu-info {
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        .menu-info h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.4rem;
+            color: #4e342e;
+        }
+
+        .menu-info p {
+            font-size: 0.88rem;
+            color: #6d4c41;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #8d6e63;
+            font-size: 1.15rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu-table { display: none; }
+            .menu-table, .menu-table tr, .menu-card {
+                display: block;
+                width: 100%;
+                border-spacing: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <table class="nav-table">
+            <tr>
+                <td style="text-align: left;">
+                    <span class="logo">บ้านไร่กาแฟ</span>
+                </td>
+                <td style="text-align: right;">
+                    <table class="nav-menu-table">
+                        <tr>
+                            <td><span>หน้าแรก</span></td>
+                            <td><span>บรรยากาศไร่</span></td>
+                            <td><span>เมนูกาแฟ</span></td>
+                            <td><span>ขนมโฮมเมด</span></td>
+                            <td><span>ติดต่อเรา</span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <!-- ส่วนเนื้อหา: เมนูกาแฟ -->
+    <div class="menu-container">
+        <h2 class="section-title">เมนูกาแฟสดจากไร่</h2>
+        <p class="section-subtitle">คัดสรรเมล็ดกาแฟคุณภาพ คั่วเข้มหอมกรุ่น ชงสดใหม่ทุกแก้ว</p>
+
+        <table class="menu-table">
+            <tr>
+                <td class="menu-card">
+                    <img src="images/123.jpg" alt="กาแฟดริปบ้านไร่">
+                    <div class="menu-info">
+                        <h3>กาแฟดริปบ้านไร่ (Single Origin)</h3>
+                        <p>กาแฟดริปมือพิถีพิถัน ดึงกลิ่นหอมและรสชาติเอกลักษณ์ของเมล็ดกาแฟประจำไร่</p>
+                        <div class="price">90 ฿</div>
+                    </div>
+                </td>
+                <td class="menu-card">
+                    <img src="images/455.jpg" alt="เอสเพรสโซเย็น">
+                    <div class="menu-info">
+                        <h3>เอสเพรสโซเย็นสูตรเข้มข้น</h3>
+                        <p>กาแฟคั่วเข้มผสมนมสดและนมข้น รสชาติหวานมัน เข้มข้นถึงใจสไตล์ไทย</p>
+                        <div class="price">75 ฿</div>
+                    </div>
+                </td>
+                <td class="menu-card">
+                    <img src="images/89.jpg" alt="คัปปุชชีโนฟองนมนุ่ม">
+                    <div class="menu-info">
+                        <h3>คัปปุชชีโนร้อน</h3>
+                        <p>ช็อตเอสเพรสโซท็อปด้วยฟองนมนุ่มละเอียด โรยผงผงซินนามอนหอมเบาๆ</p>
+                        <div class="price">70 ฿</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <table class="menu-table">
+            <tr>
+                <td class="menu-card">
+                    <img src="images/78.jpg" alt="เดอร์ตี้คอฟฟี่">
+                    <div class="menu-info">
+                        <h3>บ้านไร่เดอร์ตี้ (Baan Rai Dirty)</h3>
+                        <p>นมสดเย็นจัดท็อปด้วยช็อตเอสเพรสโซเข้มข้น รสชาติแยกชั้นละมุนลิ้น</p>
+                        <div class="price">85 ฿</div>
+                    </div>
+                </td>
+                <td class="menu-card">
+                    <img src="images/44.jpg" alt="กาแฟน้ำมะพร้าวสด">
+                    <div class="menu-info">
+                        <h3>เอสเพรสโซน้ำมะพร้าวสด</h3>
+                        <p>กาแฟเข้มข้นตัดกับความหอมหวานธรรมชาติจากน้ำมะพร้าวแท้ 100%</p>
+                        <div class="price">85 ฿</div>
+                    </div>
+                </td>
+                <td class="menu-card">
+                    <img src="images/99.jpg" alt="คาราเมลมัคคิอาโต">
+                    <div class="menu-info">
+                        <h3>คาราเมลมัคคิอาโตเย็น</h3>
+                        <p>กาแฟผสมนมสด หอมกลิ่นวานิลลาและราดด้วยซอสคาราเมลโฮมเมด</p>
+                        <div class="price">80 ฿</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

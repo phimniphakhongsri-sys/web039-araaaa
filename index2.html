@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บ้านไร่กาแฟ - บรรยากาศไร่</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f7f4ef;
+            color: #3e2723;
+        }
+
+        /* Header Layout using Table */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            padding: 0.8rem 5%;
+        }
+
+        .nav-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4e342e;
+            cursor: pointer;
+        }
+
+        .nav-menu-table {
+            border-collapse: collapse;
+            margin-left: auto;
+        }
+
+        .nav-menu-table td {
+            padding: 0 1rem;
+        }
+
+        .nav-menu-table span {
+            color: #3e2723;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .nav-menu-table span:hover {
+            color: #8d6e63;
+        }
+
+        /* Atmosphere Section Layout using Table */
+        .atmos-container {
+            padding: 7rem 5% 4rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #4e342e;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: #6d4c41;
+            margin-bottom: 2.5rem;
+        }
+
+        .atmos-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .atmos-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            vertical-align: top;
+            width: 33.33%;
+        }
+
+        .atmos-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .atmos-info {
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        .atmos-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: #4e342e;
+        }
+
+        .atmos-info p {
+            font-size: 0.9rem;
+            color: #6d4c41;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu-table { display: none; }
+            .atmos-table, .atmos-table tr, .atmos-card {
+                display: block;
+                width: 100%;
+                border-spacing: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <table class="nav-table">
+            <tr>
+                <td style="text-align: left;">
+                    <span class="logo">บ้านไร่กาแฟ</span>
+                </td>
+                <td style="text-align: right;">
+                    <table class="nav-menu-table">
+                   <tr>
+       <td><a href="index.html">หน้าแรก</a></td>
+    	<td><a href="index2.html">บรรยากาศไร่</a></td>
+  	  <td><a href="index3.html">เมนูกาแฟ</a></td>
+    	<td><a href="index4.html">ขนมโฮมเมด</a></td>
+   	 <td><a href="index5.html">ติดต่อเรา</a></td>
+</tr>                    
+		</table>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    
+    <div class="atmos-container">
+        <h2 class="section-title">บรรยากาศรอบบ้านไร่กาแฟ</h2>
+        <p class="section-subtitle">ดื่มด่ำกับธรรมชาติ ทิวทัศน์แปลงกาแฟ และความสงบผ่อนคลายในสไตล์บ้านไร่</p>
+
+        <table class="atmos-table">
+            <tr>
+                <td class="atmos-card">
+                    <img src="images/344.jpg" alt="แปลงต้นกาแฟ">
+                    <div class="atmos-info">
+                        <h3>แปลงปลูกกาแฟธรรมชาติ</h3>
+                        <p>เดินชมต้นกาแฟสดๆ จากแปลงปลูก สัมผัสวิถีเกษตรกรและกระบวนการดูแลเมล็ดกาแฟอย่างใกล้ชิด</p>
+                    </div>
+                </td>
+                <td class="atmos-card">
+                    <img src="images/000.jpg" alt="ระเบียงไม้ชมวิว">
+                    <div class="atmos-info">
+                        <h3>ระเบียงไม้ชมวิวพาโนรามา</h3>
+                        <p>จิบกาแฟบนระเบียงไม้รับลมเย็น มองเห็นวิวทิวเขาและแปลงกาแฟเขียวขจีสุดสายตา</p>
+                    </div>
+                </td>
+                <td class="atmos-card">
+                    <img src="images/900.jpg""โรงคั่วกาแฟดิบ">
+                    <div class="atmos-info">
+                        <h3>มุมโรงคั่วกาแฟโฮมเมด</h3>
+                        <p>สัมผัสกลิ่นหอมกรุ่นของเมล็ดกาแฟคั่วใหม่สดๆ จากโรงคั่วประจำไร่ในทุกๆ เช้า</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

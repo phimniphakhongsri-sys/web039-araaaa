@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บ้านไร่กาแฟ - ขนมโฮมเมด</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f7f4ef;
+            color: #3e2723;
+        }
+
+        /* Header Layout using Table */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            padding: 0.8rem 5%;
+        }
+
+        .nav-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4e342e;
+            cursor: pointer;
+        }
+
+        .nav-menu-table {
+            border-collapse: collapse;
+            margin-left: auto;
+        }
+
+        .nav-menu-table td {
+            padding: 0 1rem;
+        }
+
+        .nav-menu-table span {
+            color: #3e2723;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .nav-menu-table span:hover {
+            color: #8d6e63;
+        }
+
+        /* Container Layout */
+        .bakery-container {
+            padding: 7rem 5% 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #4e342e;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: #6d4c41;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        /* Bakery Grid Table Layout (2 Cards per Row) */
+        .bakery-grid-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .bakery-card-td {
+            width: 50%;
+            vertical-align: top;
+        }
+
+        .card-inner-table {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-collapse: collapse;
+        }
+
+        .card-img-td {
+            width: 40%;
+        }
+
+        .bakery-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-info-td {
+            width: 60%;
+            padding: 1rem 1.2rem;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        .card-info-td h3 {
+            font-size: 1.1rem;
+            color: #4e342e;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-info-td p {
+            font-size: 0.88rem;
+            color: #6d4c41;
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #8d6e63;
+            font-size: 1.15rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu-table { display: none; }
+            .bakery-grid-table, .bakery-grid-table tr, .bakery-card-td {
+                display: block;
+                width: 100%;
+                border-spacing: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header (ใช้ตาราง Table และ tr/td แทน nav) -->
+    <header>
+        <table class="nav-table">
+            <tr>
+                <td style="text-align: left;">
+                    <span class="logo">บ้านไร่กาแฟ</span>
+                </td>
+                <td style="text-align: right;">
+                    <table class="nav-menu-table">
+                        <tr>
+    <td><a href="index.html">หน้าแรก</a></td>
+    <td><a href="index2.html">บรรยากาศไร่</a></td>
+    <td><a href="index3.html">เมนูกาแฟ</a></td>
+    <td><a href="index4.html">ขนมโฮมเมด</a></td>
+    <td><a href="index5.html">ติดต่อเรา</a></td>
+</tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    
+    <div class="bakery-container">
+        <h2 class="section-title">เบเกอรี่ & ขนมโฮมเมด</h2>
+        <p class="section-subtitle">อบสดใหม่จากเตาทุกวัน ทานคู่กับกาแฟสดคั่วใหม่เข้ากันได้อย่างลงตัว</p>
+
+        <!-- แถวที่ 1 -->
+        <table class="bakery-grid-table">
+            <tr>
+                <td class="bakery-card-td">
+                    <table class="card-inner-table">
+                        <tr>
+                            <td class="card-img-td">
+                        <img src="images/87.jpg" width="200" height="200"alt="พายมะพร้าวอ่อน">
+                            </td>
+                            <td class="card-info-td">
+                                <h3>พายมะพร้าวอ่อนบ้านไร่</h3>
+                                <p>แป้งพายกรอบหอมเนย สอดไส้ครีมมะพร้าวอ่อนรสหวานละมุนลิ้น</p>
+                                <div class="price">85 ฿</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="bakery-card-td">
+                    <table class="card-inner-table">
+                        <tr>
+                            <td class="card-img-td">
+                             <img src="images/56.jpg"width=200" height="200" alt="เค้กกล้วยหอม">
+                            </td>
+                            <td class="card-info-td">
+                                <h3>เค้กกล้วยหอมอบวอลนัท</h3>
+                                <p>เค้กกล้วยหอมเนื้อนุ่มฉ่ำ โรยหน้าด้วยวอลนัทอบกรอบหอมมัน</p>
+                                <div class="price">65 ฿</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- แถวที่ 2 -->
+        <table class="bakery-grid-table">
+            <tr>
+                <td class="bakery-card-td">
+                    <table class="card-inner-table">
+                        <tr>
+                            <td class="card-img-td">
+                            <img src="images/67.jpg" width="200" height="200"alt="สโคนเนยสด">
+                            </td>
+                            <td class="card-info-td">
+                                <h3>สโคนเนยสดแยมสตรอว์เบอร์รี</h3>
+                                <p>สโคนสไตล์อังกฤษหอมเนยสด เสิร์ฟพร้อมแยมและแคลตเต็ดครีม</p>
+                                <div class="price">75 ฿</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="bakery-card-td">
+                    <table class="card-inner-table">
+                        <tr>
+                            <td class="card-img-td">
+                      <img src="images/333.jpg"width="200" height="200" alt="บราวนี่แมคคาเดเมีย">
+                            </td>
+                            <td class="card-info-td">
+                                <h3>บราวนี่เนื้อหนึบแมคคาเดเมีย</h3>
+                                <p>บราวนี่ช็อกโกแลตแท้รสเข้มข้น ท็อปด้วยถั่วแมคคาเดเมียอบกรอบ</p>
+                                <div class="price">80 ฿</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>
