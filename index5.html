@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บ้านไร่กาแฟ - ติดต่อเรา (ประจวบคีรีขันธ์)</title>
+    <title>บ้านไร่กาแฟ - ติดต่อเรา</title>
 
     <style>
         * {
@@ -18,7 +19,6 @@
             color: #3e2723;
         }
 
-        /* Header Layout using Table */
         header {
             position: fixed;
             top: 0;
@@ -39,7 +39,6 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #4e342e;
-            cursor: pointer;
         }
 
         .nav-menu-table {
@@ -51,20 +50,19 @@
             padding: 0 1rem;
         }
 
-        .nav-menu-table span {
+        a {
+            text-decoration: none;
             color: #3e2723;
             font-weight: 500;
-            cursor: pointer;
         }
 
-        .nav-menu-table span:hover {
+        a:hover {
             color: #8d6e63;
         }
 
-        /* Contact Section Layout using Table */
         .contact-container {
             padding: 7rem 5% 4rem;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -84,7 +82,7 @@
         .contact-main-table {
             width: 100%;
             border-collapse: separate;
-            border-spacing: 20px;
+            border-spacing: 15px;
         }
 
         .contact-card-td {
@@ -137,75 +135,183 @@
             color: #8d6e63;
             margin-top: 1rem;
             border: 1px dashed #d7ccc8;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #6d4c41;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .map-link:hover {
+            background-color: #8d6e63;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #4e342e;
+            color: white;
+            margin-top: 2rem;
         }
 
         @media (max-width: 768px) {
-            .nav-menu-table { display: none; }
-            .contact-main-table, .contact-main-table tr, .contact-card-td {
+            header {
+                padding: 0.8rem 3%;
+            }
+
+            .nav-menu-table {
+                display: none;
+            }
+
+            .contact-container {
+                padding: 6rem 4% 2rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .contact-main-table,
+            .contact-main-table tbody,
+            .contact-main-table tr,
+            .contact-card-td {
                 display: block;
                 width: 100%;
+            }
+
+            .contact-main-table {
                 border-spacing: 0;
+            }
+
+            .contact-card-td {
                 margin-bottom: 1.5rem;
+                padding: 1.3rem;
             }
         }
     </style>
 </head>
+
 <body>
 
-       <header>
+    <header>
         <table class="nav-table">
             <tr>
                 <td style="text-align: left;">
                     <span class="logo">บ้านไร่กาแฟ</span>
                 </td>
+
                 <td style="text-align: right;">
                     <table class="nav-menu-table">
                         <tr>
-    <td><a href="index.html">หน้าแรก</a></td>
-    <td><a href="index2.html">บรรยากาศไร่</a></td>
-    <td><a href="index3.html">เมนูกาแฟ</a></td>
-    <td><a href="index4.html">ขนมโฮมเมด</a></td>
-    <td><a href="index5.html">ติดต่อเรา</a></td>
-</tr>                    
-</table>
+                            <td><a href="index.html">หน้าแรก</a></td>
+                            <td><a href="index2.html">บรรยากาศไร่</a></td>
+                            <td><a href="index3.html">เมนูกาแฟ</a></td>
+                            <td><a href="index4.html">ขนมโฮมเมด</a></td>
+                            <td><a href="index5.html">ติดต่อเรา</a></td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>
     </header>
 
-    <!-- ส่วนเนื้อหาหน้าติดต่อเรา (ประจวบคีรีขันธ์) -->
     <div class="contact-container">
-        <h2 class="section-title">ติดต่อบ้านไร่กาแฟ (ประจวบคีรีขันธ์)</h2>
-        <p class="section-subtitle">แวะมาสัมผัสธรรมชาติ จิบกาแฟสดคั่วใหม่ หรือสอบถามเส้นทางเดินทางได้ที่นี่</p>
+
+        <h2 class="section-title">ติดต่อบ้านไร่กาแฟ</h2>
+
+        <p class="section-subtitle">
+            แวะมาสัมผัสธรรมชาติ จิบกาแฟสดคั่วใหม่
+            หรือสอบถามเส้นทางเดินทางได้ที่นี่
+        </p>
 
         <table class="contact-main-table">
             <tr>
-                <!-- ฝั่งซ้าย: ข้อมูลร้านและเวลาทำการ -->
+
+                <!-- ฝั่งซ้าย ข้อมูลร้าน -->
                 <td class="contact-card-td">
+
                     <h3 class="card-heading">ข้อมูลและการติดต่อ</h3>
+
                     <table class="info-table">
+
                         <tr>
-                            <td class="info-label">ที่อยู่ไร่:</td>
-                            <td class="info-val">88/9 หมู่ 4 ต.ทับสะแก อ.ทับสะแก จ.ประจวบคีรีขันธ์ 77130</td>
+                            <td class="info-label">ที่อยู่ร้าน:</td>
+                            <td class="info-val">
+                                88/9 หมู่ 4 ต.ทับสะแก อ.ทับสะแก
+                                จ.ประจวบคีรีขันธ์ 77130
+                            </td>
                         </tr>
+
                         <tr>
                             <td class="info-label">เบอร์โทรศัพท์:</td>
-                            <td class="info-val">032-611-234, 081-987-6543</td>
+                            <td class="info-val">
+                                032-611-234, 081-987-6543
+                            </td>
                         </tr>
+
                         <tr>
                             <td class="info-label">อีเมล:</td>
-                            <td class="info-val">prachuap@baanraicoffee.com</td>
+                            <td class="info-val">
+                                prachuap@baanraicoffee.com
+                            </td>
                         </tr>
+
                         <tr>
                             <td class="info-label">จันทร์ - ศุกร์:</td>
-                            <td class="info-val">07:30 - 17:00 น.</td>
+                            <td class="info-val">
+                                07:30 - 17:00 น.
+                            </td>
                         </tr>
+
                         <tr>
                             <td class="info-label">เสาร์ - อาทิตย์:</td>
-                            <td class="info-val">07:00 - 18:00 น.</td>
+                            <td class="info-val">
+                                07:00 - 18:00 น.
+                            </td>
                         </tr>
+
                     </table>
                 </td>
 
-                </body>
+                <!-- ฝั่งขวา แผนที่ -->
+                <td class="contact-card-td">
+
+                    <h3 class="card-heading">แผนที่ร้าน</h3>
+
+                    <p>
+                        บ้านไร่กาแฟ ตั้งอยู่ที่อำเภอทับสะแก
+                        จังหวัดประจวบคีรีขันธ์
+                    </p>
+
+                    <div class="map-box">
+                        <p>แผนที่บ้านไร่กาแฟ<br>
+                        อำเภอทับสะแก จังหวัดประจวบคีรีขันธ์</p>
+                    </div>
+
+                    <a class="map-link"
+                       href="https://www.google.com/maps/search/?api=1&query=ทับสะแก+ประจวบคีรีขันธ์"
+                       target="_blank">
+                        ดูเส้นทาง Google Maps
+                    </a>
+
+                </td>
+
+            </tr>
+        </table>
+
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 บ้านไร่กาแฟ | ประจวบคีรีขันธ์</p>
+    </footer>
+
+</body>
 </html>
+```
