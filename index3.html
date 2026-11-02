@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -19,7 +18,7 @@
             color: #3e2723;
         }
 
-        /* ส่วนหัวเว็บไซต์ */
+        /* Header Layout using Table */
         header {
             position: fixed;
             top: 0;
@@ -40,6 +39,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: #4e342e;
+            cursor: pointer;
         }
 
         .nav-menu-table {
@@ -51,18 +51,17 @@
             padding: 0 1rem;
         }
 
-        /* เมนูด้านบน */
-        a {
-            text-decoration: none;
+        .nav-menu-table span {
             color: #3e2723;
             font-weight: 500;
+            cursor: pointer;
         }
 
-        .nav-menu-table a:hover {
+        .nav-menu-table span:hover {
             color: #8d6e63;
         }
 
-        /* ส่วนเมนูกาแฟ */
+        /* Menu Section Layout using Table */
         .menu-container {
             padding: 7rem 5% 4rem;
             max-width: 1100px;
@@ -79,10 +78,8 @@
         .section-subtitle {
             color: #6d4c41;
             margin-bottom: 2.5rem;
-            line-height: 1.6;
         }
 
-        /* ตารางเมนู */
         .menu-table {
             width: 100%;
             border-collapse: separate;
@@ -99,7 +96,6 @@
             width: 33.33%;
         }
 
-        /* รูปภาพเมนู */
         .menu-img {
             width: 100%;
             height: 200px;
@@ -122,7 +118,7 @@
             font-size: 0.88rem;
             color: #6d4c41;
             margin-bottom: 0.8rem;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .price {
@@ -131,64 +127,34 @@
             font-size: 1.15rem;
         }
 
-        /* แสดงผลบนโทรศัพท์ */
         @media (max-width: 768px) {
-            header {
-                padding: 0.8rem 2%;
-            }
-
-            .nav-menu-table {
-                display: none;
-            }
-
-            .menu-container {
-                padding: 6rem 4% 3rem;
-            }
-
-            .menu-table,
-            .menu-table tr,
-            .menu-card {
+            .nav-menu-table { display: none; }
+            .menu-table, .menu-table tr, .menu-card {
                 display: block;
                 width: 100%;
-            }
-
-            .menu-table {
                 border-spacing: 0;
-            }
-
-            .menu-card {
                 margin-bottom: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.7rem;
-            }
-
-            .menu-img {
-                height: 220px;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <!-- ส่วนหัวเว็บไซต์ -->
+    
     <header>
         <table class="nav-table">
             <tr>
                 <td style="text-align: left;">
                     <span class="logo">บ้านไร่กาแฟ</span>
                 </td>
-
                 <td style="text-align: right;">
                     <table class="nav-menu-table">
                         <tr>
-                            <td><a href="index.html">หน้าแรก</a></td>
-                            <td><a href="index2.html">บรรยากาศไร่</a></td>
-                            <td><a href="index3.html">เมนูกาแฟ</a></td>
-                            <td><a href="index4.html">ขนมโฮมเมด</a></td>
-                            <td><a href="index5.html">ติดต่อเรา</a></td>
+                            <td><span>หน้าแรก</span></td>
+                            <td><span>บรรยากาศไร่</span></td>
+                            <td><span>เมนูกาแฟ</span></td>
+                            <td><span>ขนมโฮมเมด</span></td>
+                            <td><span>ติดต่อเรา</span></td>
                         </tr>
                     </table>
                 </td>
@@ -196,94 +162,60 @@
         </table>
     </header>
 
-    <!-- ส่วนเนื้อหาเมนูกาแฟ -->
+    <!-- ส่วนเนื้อหา: เมนูกาแฟ -->
     <div class="menu-container">
-
         <h2 class="section-title">เมนูกาแฟสดจากไร่</h2>
+        <p class="section-subtitle">คัดสรรเมล็ดกาแฟคุณภาพ คั่วเข้มหอมกรุ่น ชงสดใหม่ทุกแก้ว</p>
 
-        <p class="section-subtitle">
-            คัดสรรเมล็ดกาแฟคุณภาพ คั่วเข้มหอมกรุ่น ชงสดใหม่ทุกแก้ว
-        </p>
-
-        <!-- แถวที่ 1 -->
         <table class="menu-table">
             <tr>
                 <td class="menu-card">
-                    <img src="images/123.jpg"
-                         width="300" height="200"
-                         class="menu-img"
-                         alt="กาแฟดริปบ้านไร่">
-
+                    <img src="images/123.jpg" alt="กาแฟดริปบ้านไร่">
                     <div class="menu-info">
                         <h3>กาแฟดริปบ้านไร่ (Single Origin)</h3>
                         <p>กาแฟดริปมือพิถีพิถัน ดึงกลิ่นหอมและรสชาติเอกลักษณ์ของเมล็ดกาแฟประจำไร่</p>
                         <div class="price">90 ฿</div>
                     </div>
                 </td>
-
                 <td class="menu-card">
-                    <img src="images/455.jpg"
-                         width="300" height="200"
-                         class="menu-img"
-                         alt="เอสเพรสโซเย็น">
-
+                    <img src="images/455.jpg" alt="เอสเพรสโซเย็น">
                     <div class="menu-info">
                         <h3>เอสเพรสโซเย็นสูตรเข้มข้น</h3>
                         <p>กาแฟคั่วเข้มผสมนมสดและนมข้น รสชาติหวานมัน เข้มข้นถึงใจสไตล์ไทย</p>
                         <div class="price">75 ฿</div>
                     </div>
                 </td>
-
                 <td class="menu-card">
-                    <img src="images/89.jpg"
-                         width="300" height="200"
-                         class="menu-img"
-                         alt="คัปปุชชีโนร้อน">
-
+                    <img src="images/89.jpg" alt="คัปปุชชีโนฟองนมนุ่ม">
                     <div class="menu-info">
                         <h3>คัปปุชชีโนร้อน</h3>
-                        <p>ช็อตเอสเพรสโซท็อปด้วยฟองนมนุ่มละเอียด โรยผงซินนามอนหอมเบาๆ</p>
+                        <p>ช็อตเอสเพรสโซท็อปด้วยฟองนมนุ่มละเอียด โรยผงผงซินนามอนหอมเบาๆ</p>
                         <div class="price">70 ฿</div>
                     </div>
                 </td>
             </tr>
         </table>
 
-        <!-- แถวที่ 2 -->
         <table class="menu-table">
             <tr>
                 <td class="menu-card">
-                    <img src="images/78.jpg"
-                         width="300" height="200"
-                         class="menu-img"
-                         alt="เดอร์ตี้คอฟฟี่">
-
+                    <img src="images/78.jpg" alt="เดอร์ตี้คอฟฟี่">
                     <div class="menu-info">
                         <h3>บ้านไร่เดอร์ตี้ (Baan Rai Dirty)</h3>
                         <p>นมสดเย็นจัดท็อปด้วยช็อตเอสเพรสโซเข้มข้น รสชาติแยกชั้นละมุนลิ้น</p>
                         <div class="price">85 ฿</div>
                     </div>
                 </td>
-
                 <td class="menu-card">
-                    <img src="images/44.jpg"
-                         width="300" height="200"
-                         class="menu-img"
-                         alt="กาแฟน้ำมะพร้าวสด">
-
+                    <img src="images/44.jpg" alt="กาแฟน้ำมะพร้าวสด">
                     <div class="menu-info">
                         <h3>เอสเพรสโซน้ำมะพร้าวสด</h3>
                         <p>กาแฟเข้มข้นตัดกับความหอมหวานธรรมชาติจากน้ำมะพร้าวแท้ 100%</p>
                         <div class="price">85 ฿</div>
                     </div>
                 </td>
-
                 <td class="menu-card">
-                    <img src="images/99.jpg"
-                         width="300" height="200"
-                         class="menu-img"
-                         alt="คาราเมลมัคคิอาโต">
-
+                    <img src="images/99.jpg" alt="คาราเมลมัคคิอาโต">
                     <div class="menu-info">
                         <h3>คาราเมลมัคคิอาโตเย็น</h3>
                         <p>กาแฟผสมนมสด หอมกลิ่นวานิลลาและราดด้วยซอสคาราเมลโฮมเมด</p>
@@ -292,7 +224,6 @@
                 </td>
             </tr>
         </table>
-
     </div>
 
 </body>
